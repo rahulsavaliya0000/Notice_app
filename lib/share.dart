@@ -27,7 +27,7 @@ class ShowNoticesPage extends StatelessWidget {
               var data =
                   snapshot.data!.docs[index].data() as Map<String, dynamic>;
               return ReviewCard(
-                reviewerName: 'Carolyne Augustine',
+                reviewerName: 'COLLEGE AUTHORITY',
                 reviewedPlace: data['title'] ?? "$index",
                 reviewSnippet: data['description'] ?? "There is Nothing.",
                 imageUrl: data['image_url'] ?? 'https://imgs.search.brave.com/jQZwxbtizj_l36g9FsUsDscLdaY1hUm9NYpeY_why3k/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzM4LzIzLzM4/LzM2MF9GXzEzODIz/Mzg5MV9UZ2xOMXNI/THA2M2ZJNGowTloy/STZyZHRKaVYwdG1K/RC5qcGc',
@@ -352,7 +352,7 @@ class _ReviewDetailPageState extends State<ReviewDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Review Details'),
+        title: Text('Notice Details'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -392,7 +392,7 @@ class _ReviewDetailPageState extends State<ReviewDetailPage> {
                         SizedBox(height: 8),
                         Text(widget.reviewSnippet),
                         SizedBox(height: 16),
-                        Text('Reviewed by: ${widget.reviewerName}'),
+                        Text('Notice by: ${widget.reviewerName}'),
                         Padding(
                           padding: const EdgeInsets.only(top: 20),
                           child: Row(
